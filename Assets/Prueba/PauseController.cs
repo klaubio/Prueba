@@ -44,7 +44,7 @@ public class PauseController : MonoBehaviour
                 Time.timeScale = 1;
                 isPressed = true;
 
-                volume.Value =1f;
+                volume.Value = 0f;
                 
 
 

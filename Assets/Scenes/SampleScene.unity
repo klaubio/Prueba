@@ -775,4 +775,4 @@ MonoBehaviour:
   CollisionTag: 
   Parameter: Volument
   TriggerEvent: 0
-  Value: 1
+  Value: 0
