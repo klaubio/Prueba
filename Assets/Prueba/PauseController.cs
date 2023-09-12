@@ -34,7 +34,7 @@ public class PauseController : MonoBehaviour
                 Time.timeScale = 0;
                 isPressed = false;
                 volume.Value = 0.5f;
-                
+                volume.TriggerParameters();
                
                 
                 
@@ -45,7 +45,8 @@ public class PauseController : MonoBehaviour
                 isPressed = true;
 
                 volume.Value = 0f;
-                
+                volume.TriggerParameters();
+
 
 
             }

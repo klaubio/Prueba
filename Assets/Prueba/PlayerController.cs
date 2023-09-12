@@ -63,11 +63,11 @@ public class PlayerController : MonoBehaviour
         {
             movemeeent.Stop();
         }
-        else if(horizontal >= 0)
+        else if(horizontal > 0)
         {
             movemeeent.Play();
         }
-        else if(horizontal <= -1)
+        else if(horizontal < 0)
         {
             movemeeent.Play();
         }
