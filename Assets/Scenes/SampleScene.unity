@@ -136,6 +136,10 @@ GameObject:
   - component: {fileID: 102064687}
   - component: {fileID: 102064686}
   - component: {fileID: 102064684}
+  - component: {fileID: 102064688}
+  - component: {fileID: 102064689}
+  - component: {fileID: 102064690}
+  - component: {fileID: 102064691}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -226,6 +230,9 @@ MonoBehaviour:
   speed: 25
   jumpForce: 1
   isGround: 0
+  audios: {fileID: 102064688}
+  suelo: {fileID: 102064689}
+  movemeeent: {fileID: 102064690}
 --- !u!50 &102064686
 Rigidbody2D:
   serializedVersion: 4
@@ -273,6 +280,114 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8828125}
   m_EdgeRadius: 0
+--- !u!114 &102064688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102064681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1409880392
+      Data2: 1103944375
+      Data3: 1763490187
+      Data4: 2124857594
+    Path: event:/Salto
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &102064689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102064681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 643707496
+      Data2: 1301622816
+      Data3: 1271910810
+      Data4: 663921504
+    Path: event:/Suelo
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &102064690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102064681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1205497405
+      Data2: 1310207585
+      Data3: -397985610
+      Data4: 813509635
+    Path: event:/Movimientoo
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &102064691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102064681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters: []
+  TriggerEvent: 0
 --- !u!1 &235718672
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +632,7 @@ GameObject:
   - component: {fileID: 1210262406}
   - component: {fileID: 1210262407}
   - component: {fileID: 1210262408}
+  - component: {fileID: 1210262409}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -642,4 +758,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c301a86de5278e94d93aae0f46e928f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: {fileID: 1210262409}
   isPressed: 0
+--- !u!114 &1210262409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210262403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Volument
+  TriggerEvent: 0
+  Value: 1

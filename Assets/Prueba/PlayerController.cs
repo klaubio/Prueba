@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
 
@@ -9,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int jumpForce;
     [SerializeField] private bool isGround;
+    [SerializeField] FMODUnity.StudioEventEmitter audios;
+    [SerializeField] FMODUnity.StudioEventEmitter suelo;
+    [SerializeField] FMODUnity.StudioEventEmitter movemeeent;
 
 
     float horizontal;
@@ -37,6 +41,7 @@ public class PlayerController : MonoBehaviour
     public void Move(float input)
     {
         this.horizontal = input;
+        
     }
 
     public void Jump()
@@ -52,6 +57,22 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb2D.position += new Vector2(horizontal *speed *Time.fixedDeltaTime,0);
+
+
+        if(horizontal == 0)
+        {
+            movemeeent.Stop();
+        }
+        else if(horizontal >= 0)
+        {
+            movemeeent.Play();
+        }
+        else if(horizontal <= -1)
+        {
+            movemeeent.Play();
+        }
+       
+
     }
 
 
@@ -60,6 +81,7 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Floor"))
         {
             isGround = true;
+            suelo.Play();
         }
     }
 
@@ -68,6 +90,9 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Floor"))
         {
             isGround = false;
+            audios.Play();
+            
+            
         }
     }
 }
